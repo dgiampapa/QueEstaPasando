@@ -3,7 +3,7 @@ import pandas as pd
 
 Bearer = 'AAAAAAAAAAAAAAAAAAAAAHbEOwEAAAAAOSRFS1w0Wmx%2BmnDLsTzP%2FeyEglc%3DWsmsldmU9ksMUtzwebxCHbK1GEvweui2yazIe4oMVxpY2jSM2E'
 
-def buscar_tweets(mentions_id, cantidad_tweet=400):
+def buscar_tweets_mentions(mentions_id, cantidad_tweet=400):
 
     headers = {'Authorization': f'Bearer {Bearer}'} # Variable de autorizador
     url = f'https://api.twitter.com/2/users/{mentions_id}/mentions' # url de invocacion
@@ -21,9 +21,6 @@ def buscar_tweets(mentions_id, cantidad_tweet=400):
                 'pagination_token': respuesta['meta']['next_token'],
                 'max_results':100} 
     
-    data = data.reset_index(drop=True)
-
-
     return data
 
 def grabar_tweets(df, ruta_archivo):
