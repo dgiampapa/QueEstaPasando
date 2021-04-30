@@ -11,15 +11,15 @@ def buscar_tweets_mentions(mentions_id, cantidad_tweet=400):
     data = pd.DataFrame()
     params = {
         'tweet.fields': 'created_at,author_id',
-        'max_results':200} 
+        'max_results':100} 
     
-    for cantidad in range(int(cantidad_tweet/200)):
+    for cantidad in range(int(cantidad_tweet/100)):
             respuesta = requests.get(url, params=params, headers=headers).json()
             data = data.append(respuesta['data'])
             params = {
                 'tweet.fields': 'created_at,author_id',
                 'pagination_token': respuesta['meta']['next_token'],
-                'max_results':200} 
+                'max_results':100} 
     
     return data
 
@@ -27,4 +27,5 @@ def grabar_tweets(df, ruta_archivo):
     df.to_csv(ruta_archivo)
 
 def leer_tweets(ruta_archivo):
+    pd.set_option('max_colwidth', 800) 
     return pd.read_csv(ruta_archivo, index_col=0)      
