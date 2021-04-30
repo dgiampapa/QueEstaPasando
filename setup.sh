@@ -1,4 +1,3 @@
-setup.sh
 mkdir -p ~/.streamlit/
 ​
 echo "\
