@@ -60,8 +60,12 @@ class Trainer_ML(object):
         result = model.score(X_test, y_test)
         return result
     
-    def predict_model(self,model,X_test):
-        result = model.predict(X_test)
+    def predict_model(self,X_test):
+        cl = clean_data.Clean_Data()
+        X_test = cl.clean_data(X_test)
+        print(X_test.head())
+        model = joblib.load('model.joblib')
+        result = model.predict(X_test['text'])
         return result
 
     def plot_learning_curves(self,model,X_train,y_train,cv=5):
