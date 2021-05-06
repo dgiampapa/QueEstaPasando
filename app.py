@@ -117,19 +117,19 @@ if my_page == 'Predicción':
     def button():
         resultado = st.radio('Seleccione el tipo de tweet para seguir entrenando', ('','positivo', 'negativo', 'neutro'))
         if resultado == 'positivo':
-            st.write('positivo')
+#            st.write('positivo')
             if st.button('Guardar'):
         # print is visible in server output, not in the page
                 print('button clicked!')
                 st.write('Cambio satisfactorio para entrenar 🎉')                
         elif resultado == 'negativo':
-            st.write('negativo')
+#            st.write('negativo')
             if st.button('Guardar'):
         # print is visible in server output, not in the page
                 print('button clicked!')
                 st.write('Cambio satisfactorio para entrenar 🎉')
         elif resultado == 'neutro':
-            st.write('neutro')
+ #           st.write('neutro')
             if st.button('Guardar'):
         # print is visible in server output, not in the page
                 print('button clicked!')
