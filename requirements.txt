@@ -30,3 +30,5 @@ termcolor
 
 streamlit
 datetime
+nltk
+unicodedata2
