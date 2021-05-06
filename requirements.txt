@@ -30,7 +30,7 @@ termcolor
 
 streamlit
 datetime
-nltk
 unicodedata2
 seaborn
 matplotlib
+nltk==3.5
