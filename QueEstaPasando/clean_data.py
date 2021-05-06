@@ -7,9 +7,13 @@ from nltk.tokenize import word_tokenize
 from datetime import datetime
 from sklearn.model_selection import train_test_split
 from nltk.corpus import stopwords
+# import nltk 
 #import unidecode
 from sklearn.model_selection import learning_curve
 #import os
+
+
+import nltk >>> nltk.download('stopwords') 
 
 class Clean_Data(object):
     def __init__(self):
