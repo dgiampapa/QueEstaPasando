@@ -32,3 +32,5 @@ streamlit
 datetime
 nltk
 unicodedata2
+seaborn
+matplotlib
