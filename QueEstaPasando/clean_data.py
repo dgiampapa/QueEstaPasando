@@ -13,8 +13,6 @@ from sklearn.model_selection import learning_curve
 #import os
 
 
-import nltk >>> nltk.download('stopwords') 
-
 class Clean_Data(object):
     def __init__(self):
         pass
